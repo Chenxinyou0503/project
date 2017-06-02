@@ -1,0 +1,35 @@
+1.sudo docker cp /etc/apt/sources.list test:/etc/apt/sources.list
+#进入docker 安装vim （如果没有的话）
+2.apt-get install vim 
+#安装python (默认是Python2.7)
+3. apt-get install python
+apt-get install build-essential python
+apt-get install python-dev
+#安装pip
+4.apt-get install python-pip  
+apt-get install python-dev
+pip install gevent 
+pip install validictory
+pip install flask
+perl -MCPAN -e'install "LWP::Simple"'  -i http://pypi.douban.com/simple/ 
+
+apt-get install libpcre3 libpcre3-dev libpcrecpp0 libssl-dev zlib1g-dev
+
+#安装uwsgi
+5.pip install uwsgi -I
+#安装nginx (安装nginx之后的默认配置文件在 /etc/nginx/sites-enabled/default)
+apt-get install nginx
+#启动 nginx
+6.service nginx restart
+
+apt-get install software-properties-common
+apt-add-repository ppa:vbernat/haproxy-1.5
+
+#安装HAproxy
+7.apt-get install haproxy
+#更改配置，不然service haproxy restart无法启动
+8.修改/etc/default/haproxy ENABLED=1
+#修改配置文件
+9.
+#启动haproxy
+10.service haproxy restart

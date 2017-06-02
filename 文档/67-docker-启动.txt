@@ -1,0 +1,17 @@
+67 docker algner 内启动FastDFS
+
+
+/usr/local/FastDFS/storage/fdfs_storaged /etc/fdfs/storage.conf
+/usr/local/FastDFS/tracker/fdfs_trackerd /etc/fdfs/tracker.conf
+
+启动Zookeeper
+(./bin/zookeeper-server-start.sh config/zookeeper.properties &)
+启动kafka
+(./bin/kafka-server-start.sh config/server.properties &)
+测试启动kafka.producer
+(./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic bleualign-request &)
+测试启动kafka.consumer
+(./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bleualign-response --from-beginning &)
+
+
+/usr/sbin/nginx -c /etc/nginx/nginx.conf 

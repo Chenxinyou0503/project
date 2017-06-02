@@ -1,0 +1,966 @@
+    1  ping 43.240.137.1
+    2  vi /etc/network/interfaces
+    3  ping 192.168.0.18
+    4  ping 192.168.0.254
+    5  ping www.baidu.com
+    6  exit
+    7  sudo apt-get update
+    8  apt
+    9  useradd python
+   10  ls
+   11  ll
+   12  cd /
+   13  ls
+   14  cd home/
+   15  ls
+   16  useradd python
+   17  ls
+   18  cd /python
+   19  cd 
+   20  ls
+   21  cd /
+   22  ls
+   23  cat
+   24  ls
+   25  apt
+   26  ls
+   27  finger python
+   28  apt-get install finger
+   29  finger python
+   30  cd home/
+   31  ls
+   32  ls -all
+   33  passwd python
+   34  ls
+   35  finger python
+   36  ls
+   37  cd python
+   38  cd /home/python
+   39  useradd python
+   40  cat /etc/passwd
+   41  su python
+   42  ls
+   43  vim /etc/passwd
+   44  useradd -m scrapy
+   45  ls
+   46  python --version
+   47  python3 --version
+   48  cd scrapy/
+   49  ls
+   50  cd ..
+   51  cd /
+   52  ls
+   53  cd usr/
+   54  ls
+   55  cd ..
+   56  passwd scrapy
+   57  su scrapy
+   58  chmod 777 /etc/sudoers
+   59  su newtranx-test
+   60  echo 'newtranx-test  ALL=(ALL)    ALL' >> /etc/sudoers
+   61  chmod 440 /etc/sudoers
+   62  iftop -s 
+   63  sudo apt-get install iftop
+   64  cd /usr/local/
+   65  sudo apt-get update
+   66  sudo mkdir temp 
+   67  cd temp/
+   68  ls -l
+   69  sudo wget http://repo.mysql.com//mysql-apt-config_0.8.0-1_all.deb
+   70  sudo dpkg -i mysql-apt-config_0.8.0-1_all.deb 
+   71  sudo apt-get update
+   72  sudo apt-get install mysql-server
+   73  mysql
+   74  mysql -uroot -p
+   75  sudo add-apt-repository -y ppa:webupd8team/java
+   76  sudo apt-get update
+   77  sudo apt-get -y install oracle-java8-installer
+   78  sudo add-apt-repository -y ppa:webupd8team/java
+   79  add-apt-repository ppa:webupd8team/java
+   80  sudo apt-get install oracle-java8-installer
+   81  sudo apt-get update
+   82  list available jdk
+   83  java
+   84  sudo apt-get install oracle-java8-installer
+   85  ls -l /etc/alternatives/java*
+   86  sudo add-apt-repository ppa:openjdk-r/ppa
+   87  sudo apt-get update
+   88  sudo add-apt-repository ppa:openjdk-r/ppa
+   89  sudo vim /usr/bin/add-apt-repository
+   90  ping http://ppa.launchpad.net/openjdk-r/ppa/ubuntu/dists/trusty/main/binary-amd64
+   91  sudo add-apt-repository -r  ppa:openjdk-r/ppa
+   92  sudo apt-get install -r  oracle-java8-installer
+   93  sudo apt-get install -r oracle-java8-installer
+   94  sudo apt-get install -r  oracle-java8-installer
+   95  sudo add-apt-repository -r ppa:webupd8team/java
+   96  sudo apt-get update
+   97  sudo apt-get install --reinstall ca-certificates
+   98  sudo add-apt-repository ppa:webupd8team/java
+   99  sudo apt-get update
+  100  cat /etc/issue
+  101  grep -r 'webupd8team/java' /etc/apt/sources.list.d/ 
+  102  cd /etc/apt/sources.list.d/
+  103  ls -l
+  104  sudo rm openjdk-r-ppa-trusty.list
+  105  sudo rm openjdk-r-ppa-trusty.list.save 
+  106  sudo rm webupd8team-java-trusty.list
+  107  sudo rm webupd8team-java-trusty.list.save 
+  108  ls -l
+  109  sudo apt-get update 
+  110  sudo -E add-apt-repository ppa:openjdk-r/ppa 
+  111  sudo apt-get update
+  112  ls -l
+  113  sudo rm openjdk-r-ppa-trusty.list 
+  114  ls -l
+  115  sudo add-apt-repository ppa:webupd8team/java
+  116  su -
+  117  echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list
+  118  echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+  119  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+  120  apt-get update
+  121  cd /etc/apt/sources.list.d/
+  122  ls -l
+  123  sudo rm webupd8team-java
+  124  sudo rm webupd8team-java.list 
+  125  sudo rm webupd8team-java-trusty.list 
+  126  sudo touch webupd8team-ubuntu-java-trusty.list
+  127  sud ovim webupd8team-ubuntu-java-trusty.list 
+  128  sudo vim webupd8team-ubuntu-java-trusty.list 
+  129  sudo apt-get update
+  130  ls -l
+  131  sudo rm -rf webupd8team-ubuntu-java-trusty.list 
+  132  sudo add-apt-repository ppa:openjdk-r/ppa
+  133  sudo apt-get update
+  134  sudo apt-get install openjdk-8-jdk
+  135  ls -l
+  136  sudo rm openjdk-r-ppa-trusty.list 
+  137  sudo apt-get update 
+  138  ppa
+  139  sudo apt-get install python-software-properties
+  140  sudo apt-get install software-properties-common﻿
+  141  sudo apt-get install software-properties-common 
+  142  sudo apt-get upgrade 
+  143  sudo add-apt-repository ppa:openjdk-r/ppa
+  144  sudo apt-get update
+  145  java -version
+  146  sudo apt-get install  openjdk-8-jre-headless
+  147  ls -l
+  148  sudo add-apt-repository ppa:webupd8team/java
+  149  sudo apt-get install oracle-java8-installer
+  150  ls -l
+  151  sudo rm openjdk-r-ppa-trusty.list
+  152  sudo rm openjdk-r-ppa-trusty.list.save 
+  153  sudo rm webupd8team-java-trusty.list 
+  154  ls -l
+  155  sudo scp -r root@192.168.0.3:/etc/apt/sources.list.d/openjdk-r-ppa-trusty.list ./
+  156  sudo scp -r root@192.168.0.3:/etc/apt/sources.list.d/openjdk-r-ppa-trusty.list.save ./
+  157  ls -l
+  158  sudo apt -get 
+  159  sudo apt-get update 
+  160  cat /etc/issue
+  161  sudo lsb_release -a
+  162  uname -r
+  163  cd ../
+  164  sudo vim sources.list
+  165  ls -l
+  166  sudo mv sources.list sources.list.bak
+  167  ls -
+  168  ls -l
+  169  sudo touch sources.list 
+  170  ls -l
+  171  sudo vim sources.list
+  172  sudo apt-get update 
+  173  ls -l
+  174  cd sources.list.d/
+  175  ls -l
+  176  sudo rm openjdk-r-ppa-trusty.list
+  177  sudo rm openjdk-r-ppa-trusty.list.save 
+  178  ls -l
+  179  java
+  180  sudo java -version
+  181  cd ..
+  182  ll
+  183  sudo ./xampp-linux-x64-7.0.9-1-installer.run 
+  184  exit
+  185  add addUser  scrapy 
+  186  sudo  addUser  scrapy 
+  187  sudo  adduser  scrapy 
+  188  sudo passwd scrapy
+  189  su scrapy
+  190  sudo passwd scrapy
+  191  userdel -r scrapy
+  192  sudo adduser scrapy
+  193  finger python
+  194  sudo passwd  python 
+  195  userdel -r python
+  196  kill -9 12028
+  197  userdel -r python
+  198  su scrapy
+  199  cd 
+  200  visudo
+  201  chmod u+w /etc/sudoers
+  202  vi /etc/sudoers
+  203  chmod u-w /etc/sudoers
+  204  whereis snmpd
+  205  chmod +777 jdk1.8.0_101/
+  206  ll
+  207  exit
+  208  java
+  209  java -version
+  210  exit
+  211  chmod +R 777 jdk1.8.0_101/
+  212  chmod a+x jdk1.8.0_101/
+  213  ll jdk1.8.0_101/bin/
+  214  chmod 777 jdk1.8.0_101/ -R
+  215  ll jdk1.8.0_101/bin/
+  216  java
+  217  exit
+  218  java -v
+  219  java
+  220  java -version
+  221  sudo update-alternatives --config java
+  222  sudo add-apt-repository -y ppa:webupd8team/java
+  223  sudo add-apt-repository ppa:webupd8team/java
+  224  sudo apt-get update
+  225  cd /usr/local/
+  226  sudo nkdir temp
+  227  sudo mkdir temp
+  228  cd temp/
+  229  ls -l
+  230  sudo wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.38/bin/apache-tomcat-8.0.38.tar.gz
+  231  sudo tar -zxvf apache-tomcat-8.0.38.tar.gz 
+  232  sudo mv apache-tomcat-8.0.38 ../
+  233  cd ../
+  234  cd temp/
+  235  cd ../
+  236  git clone https://github.com/letsencrypt/letsencrypt
+  237  sudo git clone https://github.com/letsencrypt/letsencrypt
+  238  cd temp/
+  239  sudo git clone https://github.com/letsencrypt/letsencrypt
+  240  ls -l
+  241  cd ../apache-tomcat-8.0.38/bin/
+  242  ls -l
+  243  sudo ./shutdown.sh 
+  244  sudo ./startup.sh 
+  245  cd ../logs/
+  246  tail -f catalina.out 
+  247  add-apt-repository ppa:nginx/stable && apt-get update && apt-get install nginx
+  248  nginx
+  249  echo deb http://nginx.org/packages/ubuntu/ trusty nginx >> /etc/apt/sources.list
+  250  echo deb-src http://nginx.org/packages/ubuntu/ trusty nginx >> /etc/apt/sources.list
+  251  wget http://nginx.org/keys/nginx_signing.key 
+  252  apt-key add nginx_signing.key
+  253  apt-get install nginx
+  254  nginx
+  255  nginx -v
+  256  service nginx stats
+  257  service nginx status
+  258  cd /usr/local/temp/
+  259  ls -l
+  260  sudo mv certbot-master ../
+  261  cd ../certbot-master/
+  262  ./letsencrypt-auto certonly --standalone
+  263  sudo ./letsencrypt-auto certonly --standalone
+  264  ls -l
+  265  sudo chmod +x letsencrypt-auto
+  266  sudo ./letsencrypt-auto certonly --standalone
+  267  14678493@qq.com
+  268  sudo ./letsencrypt-auto certonly --standalone
+  269  cd  /etc/letsencrypt/live/test.newtranx.com
+  270  ls -l
+  271  openssl pkcs12 -export -in cert.pem -inkey privkey.pem -out cert_and_key.p12 -name tomcat -CAfile chain.pem -caname root
+  272  keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeystore MyDSKeyStore.jks -srckeystore cert_and_key.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias tomcat
+  273  keytool -import -trustcacerts -alias root -file chain.pem -keystore MyDSKeyStore.jks
+  274  cd /usr/local/apache-tomcat-8.0.38/conf/
+  275  sudo vim server.xml 
+  276  cd ../bin/
+  277  sudo ./shutdown.sh 
+  278  whereis java
+  279  sudo apt-get upgrade java
+  280  sudo add-apt-repository ppa:webupd8team/java
+  281  sudo apt-get update
+  282  sudo apt-get install Oracle-java8-installer
+  283  cd /etc/apt/sources.list.d/
+  284  ls -l
+  285  sudo rm webupd8team-java-trusty.list
+  286  sudo rm webupd8team-java-trusty.list.save 
+  287  ls -l
+  288  curl http://ppa.launchpad.net/webupd8team/java/ubuntu
+  289  sudo apt-get purge openjdk*
+  290  sudo add-apt-repository ppa:webupd8team/java
+  291  echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list
+  292  echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+  293  ls -l
+  294  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+  295  apt-get update
+  296  apt-get install oracle-java8-installer
+  297  sudo update-alternatives --config java
+  298  sudo update-alternatives --config javac
+  299  sudo service nginx stop 
+  300  cd /usr/local/apache-tomcat-8.0.38/bin/
+  301  sudo ./shutdown.sh 
+  302  sudo ./startup.sh 
+  303  cd ../webapps/
+  304  pwd
+  305  sudo update-alternatives --config java
+  306  sudo update-alternatives --config javac
+  307  mysql
+  308  ll
+  309  cd /etc/letsencrypt/
+  310  ll
+  311  cd live/
+  312  ll
+  313  cd test.newtranx.com/
+  314  ll
+  315  pwd
+  316  cd /home/newtranx-test/services/letsencrypt/
+  317  ll
+  318  vim setup.cfg 
+  319  ll certbot-apache/
+  320  mysql -uroot -pnewtranx@tian
+  321  mysql -ucat -pcat@test
+  322  ps -ef |grep mysql
+  323  sudo cd /etc/mysql/conf.d/
+  324  cd /etc/mysql/conf.d/
+  325  sudo vim mysql.cnf 
+  326  ls
+  327  cd ../
+  328  ls -l
+  329  sudo vim conf.d/mysql.cnf
+  330  sudo vim my.cnf
+  331  sudo vim mysql.cnf 
+  332  cd mysql.conf.d/
+  333  ls -l
+  334  sudo vim mysqld.cnf 
+  335  sudo service mysql stop 
+  336  sudo service mysql start
+  337  scrapy shell http://rescueplans.seagate.com/?sn=NA7PNN1Q
+  338  sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+  339  pip install cryptography
+  340  scrapy shell http://rescueplans.seagate.com/?sn=NA7PNN1Q
+  341  pip install pycparser
+  342  pip install yacctab
+  343  apt-get install build-essential libssl-dev libffi-dev python-dev
+  344  pip install --upgrade --force-reinstall pip virtualenv
+  345  pip install Scrapy
+  346  pip install cryptography
+  347  scrapy shell http://rescueplans.seagate.com/?sn=NA7PNN1Q
+  348  pip3 install cryptography
+  349  sudo apt-get install libffi-dev libssl-dev libpython2.7-dev
+  350  sudo apt-get install libffi-dev libssl-dev libpython-dev
+  351  sudo apt-get install libffi-dev libssl-dev libpython3-dev
+  352  pip install cryptography
+  353  pip install pyopenssl ndg-httpsclient pyasn1
+  354  pip install cryptography
+  355  pip3 install cryptography
+  356  scrapy shell http://rescueplans.seagate.com/?sn=NA7PNN1Q
+  357  ls
+  358  cd ~
+  359  ls
+  360  cd /
+  361  ls
+  362  cd home/
+  363  ls
+  364  cd scrapy/
+  365  ls
+  366  cd single/
+  367  ls
+  368  cd French/
+  369  ls
+  370  cd 11.01
+  371  ls
+  372  cd jeudi/
+  373  ls
+  374  nohup scrapy crawl jeudi &
+  375  ls
+  376  pip install service_identity
+  377  scrapy --version
+  378  sudo apt-get install python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev
+  379  sudo apt-get install python3 python3-dev
+  380  pip install scrapy
+  381  pip install lxml
+  382  pip install parsel
+  383  pip install w3lib
+  384  pip install twisted
+  385  pip install pyOpenSSL
+  386  pip install cryptography
+  387  scrapy crawl jeudi
+  388  pip --version
+  389  pip3 --version
+  390  pip install --upgrade pip
+  391  pip --version
+  392  pip3 install --upgrade pip
+  393  python -m pip install -U pip
+  394  pip list
+  395  pip --upgrade
+  396  pip list --outdated
+  397  pip install pip-review
+  398  pip-review --local --interactive
+  399  python 
+  400  scrapy crawl jeudi
+  401  pip install scrapy
+  402  scrapy --version
+  403  sudo easy_install service_identity
+  404  scrapy --version
+  405  pip install pyasn1 characteristic
+  406  scrapy --version
+  407  pip install pyOpenSSl
+  408  pip3 install pyopenssl
+  409  pip install service_identity
+  410  pip3 install service_identity
+  411  scrapy --version
+  412  scrapy crawl jeudi
+  413  whereis scrapy
+  414  scrapy --version
+  415  whereis python
+  416  pip list
+  417  pip3 list
+  418  scrapy crawl jeudi
+  419  cd ..
+  420  ls
+  421  cd republicain-lorrain/
+  422  scrapy crawl republicain-lorrain
+  423  pip3 uninstall Scrapy
+  424  scrapy crawl republicain-lorrain
+  425  scrapy --version
+  426  python
+  427  python3
+  428  scrpay2 --version
+  429  scrpay --version
+  430  python-scrapy --version
+  431  python 
+  432  whereis scrapy
+  433  pip list
+  434  scrapy shell http://www.baidu.com
+  435  pip3 list
+  436  sudo apt-get remove python3
+  437  python3
+  438  python
+  439  scrapy shell http://www.baidu.com
+  440  python
+  441  scrapy
+  442  python
+  443  pip install scrapy
+  444  pip
+  445  apt-get install python3.4
+  446  pip3 install scrapy
+  447  pip install scrapy
+  448  apt-get install pip
+  449  pip install scrapy
+  450  apt-get install build-essential libssl-dev libffi-dev python-dev
+  451  pip install --upgrade --force-reinstall pip virtualenv
+  452  mysql -uroot -pnewtranx@tian
+  453  ps -ef|grep mysql
+  454  service mysql restart
+  455  mysql -uroot -pnewtranx@tian
+  456  mysql -uapp_user -p123456
+  457  ls
+  458  mysql -uroot -pnewtranx@tian
+  459  netstat -tnl|grep 3306
+  460  clear
+  461  ls
+  462  adduser newtranx_im
+  463  ls
+  464  su - newtranx_im
+  465  wget http://sms.chanzor.com:8001/sms.aspx?action=send&userid=&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=15736786618&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  466  curl http://sms.chanzor.com:8001/sms.aspx?action=send&userid=&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=15736786618&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  467  test
+  468  curl http://api.chanzor.com:8001/sms.aspx?action=send&userid=&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=15736786618&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  469  curl http://api.chanzor.com:8001/sms.aspx?action=send&userid=&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=13327511154&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  470  curl http://api.chanzor.com/send?account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=13327511154&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  471  curl http://api.chanzor.com/send?account=xinyikeji&password=6kg85tai&mobile=13327511154&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  472  ifconfig
+  473  curl http://api.chanzor.com/send?account=xinyikeji&password=6kg85tai&mobile=13327511154&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  474  cd /usr/local/apache-tomcat-8.0.38/bin/
+  475  ls -l
+  476  sudo apt-get update
+  477  sudo apt-get install apt-transport-https ca-certificates
+  478  sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+  479  sudo touch /etc/apt/sources.list.d/docker.list
+  480  sudo echo  deb https://apt.dockerproject.org/repo ubuntu-precise main >> /etc/apt/sources.list.d/docker.list
+  481  sudo echo  deb https://apt.dockerproject.org/repo ubuntu-trusty main  >> /etc/apt/sources.list.d/docker.list
+  482  sudo apt-get purge lxc-docker
+  483  sudo apt-get update
+  484  apt-cache policy docker-engine
+  485  sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+  486  sudo apt-get update
+  487  sudo apt-get install docker-engine
+  488  cd /etc/apt/
+  489  ls -l
+  490  cd sources.list.d/
+  491  ls -l
+  492  sudo vim docker.list 
+  493  sudo apt-get update
+  494  ls -l
+  495  sudo vim nginx-stable-trusty.list
+  496  sudo apt-get update
+  497  sudo rm -rf nginx-stable-trusty.list
+  498  sudo rm -rf nginx-stable-trusty.list.save 
+  499  sudo apt-get update
+  500  curl http://sms.chanzor.com:8001/sms.aspx?action=send&userid=&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=15736786618&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  501  curl http://sms.chanzor.com:8001/sms.aspx?action=send&userid=xinyikeji&account=xinyikeji&password=58AB461678A65997D2E01060938D7FD6&mobile=15736786618&content=尊敬的刘晓你好：您的验证码09M0zx有效期为10分钟。如非本人操作，请忽略本操作。【新译科技】
+  502  sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+  503  sudo apt-get install docker-engine
+  504  ps -ef |grep 80
+  505  netstat -nlp|grep 80
+  506  cd /usr/local/apache-tomcat-8.0.38/
+  507  sp -ef |grep tomcat
+  508  docker
+  509  sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+  510  sudo apt-get install docker-engine
+  511  docker
+  512  sudo service docker start
+  513  sudo docker run hello-world
+  514  docker run docker/whalesay cowsay boo
+  515  docker run docker/whalesay cowsay pig
+  516  sudo apt-get install libreoffice
+  517  sudo vim /etc/apt/sources.list
+  518  ls -l
+  519  libreoffice 
+  520  libreoffice -v
+  521  deb http://ppa.launchpad.net/libreoffice/libreoffice-5-1/ubuntu YOUR_UBUNTU_VERSION_HERE main 
+  522  cd /etc/apt/sources.list.d/
+  523  ls -l
+  524  cd ../
+  525  ls -l
+  526  sud ovim sources.list
+  527  sudo vim sources.list
+  528  sudo apt-get update 
+  529  sudo apt-get upgrade libreoffice
+  530  sudo add-apt-repository ppa:libreoffice/ppa 
+  531  add-apt-repository ppa:libreoffice/ppa 
+  532  ls -l
+  533  sudo vim sources.list
+  534  sudo apt-get update 
+  535  sudo apt-get install python-software-properties
+  536  sudo apt-get install software-properties-common﻿
+  537  sudo add-apt-repository ppa:libreoffice/ppa 
+  538  sudo apt-get install software-properties-common 
+  539  sudo add-apt-repository ppa:libreoffice/ppa 
+  540  sudo apt-get update && sudo apt-get dist-upgrade 
+  541  sudo add-apt-repository ppa:libreoffice/ppa 
+  542  ppa:gwibber-daily/ppa
+  543  sudo add-apt-repository ppa:user/ppa-name
+  544  sudo add-apt-repository ppa:libreoffice/libreoffice-5-2
+  545  sudo apt-get update
+  546  sudo add-apt-repository ppa:libreoffice/libreoffice-5-2
+  547  cd /usr/local/temp/
+  548  ls -l
+  549  sudo wget http://www.swftools.org/swftools-0.9.2.tar.gz
+  550  ls -l
+  551  sudo tar -zxvf swftools-0.9.2.tar.gz 
+  552  ls -l
+  553  sudo mv swftools-0.9.2 ../
+  554  cd ../
+  555  cd swftools-0.9.2/
+  556  ls -l
+  557  sudo vim /etc/apt/sources.list
+  558  sudo apt-get update
+  559  sudo apt-get install swftools
+  560  swftools
+  561  swftools -v
+  562  swftools -version
+  563  sudo vim /etc/apt/sources.list
+  564  sudo apt-get install swftools
+  565  whereis swftools
+  566  whereis libreoffice
+  567  cd /usr/lib/libreoffice
+  568  ls -l
+  569  docker images
+  570  sudo docker run hello-world
+  571  docker  ps
+  572  sudo apt-get upgrade 
+  573  libreoffice -v
+  574  libreoffice -version
+  575  sudo add-apt-repository ppa:libreoffice/ppa 
+  576  cd /etc/apt/sources.list.d/
+  577  ls -l
+  578  sudo vim rm libreoffice-ppa-trusty.list
+  579  sudo rm libreoffice-ppa-trusty.list
+  580  sudo rm libreoffice-ppa-trusty.list.save 
+  581  ls -l
+  582  sudo rm libreoffice-libreoffice-5-2-trusty.list 
+  583  ls -l
+  584  sudo apt-get update 
+  585  ls -l
+  586  sudo rm libreoffice-ppa-trusty.list 
+  587  sudo rm libreoffice-libreoffice-5-2-trusty.list 
+  588  ls -l
+  589  sudo apt-get update 
+  590  scrapy shell http://blog.csdn.net/iamaiearner/article/details/9138865
+  591  ls
+  592  cd /
+  593  ls
+  594  cd home/
+  595  ls
+  596  cd scrapy/
+  597  ls
+  598  cd si
+  599  cd single/
+  600  ls
+  601  cd French/
+  602  ls
+  603  cd 11.01
+  604  ls
+  605  cd jeudi/
+  606  ls
+  607  scrapy shell http://blog.csdn.net/iamaiearner/article/details/9138865
+  608  scrapy crawl jeudi
+  609  nohup scrapy crawl jeudi &
+  610  ps -ef | grep scrapy |grep -v grep
+  611  ls
+  612  cd ..
+  613  ls
+  614  cd lequotidien/
+  615  nohup scrapy crawl lequotidien &
+  616  cd ..
+  617  ls 
+  618  cd lessentiel
+  619  nohup scrapy crawl lessentiel &
+  620  ls
+  621  nohup scrapy crawl lessentiel &
+  622  cd ..
+  623  cd republicain-lorrain
+  624  nohup scrapy crawl republicain-lorrain &
+  625  cd ..
+  626  cd aisnenouvelle
+  627  cd ..
+  628  cd 11.02
+  629  cd aisnenouvelle
+  630  nohup scrapy crawl aisnenouvelle &
+  631  cd ..
+  632  cd aisnenouvelle
+  633  nohup scrapy crawl aisnenouvelle &
+  634  cd ..
+  635  cd import sys
+  636  reload(sys)
+  637  sys.setdefaultencoding('utf8')
+  638  cd import sys
+  639  reload(sys)
+  640  sys.setdefaultencoding('utf8')
+  641  cd courrier-picard
+  642  nohup scrapy crawl courrier-picard &
+  643  cd ..
+  644  cd lejsl
+  645  nohup scrapy crawl lejsl &
+  646  cd ..
+  647  cd lest-eclair
+  648  nohup scrapy crawl lest-eclair &
+  649  cd ..
+  650  cd lunion
+  651  nohup scrapy crawl lunion &
+  652  cd ../../..
+  653  cd Russian/
+  654  ls
+  655  cd 11.02
+  656  ls
+  657  cd apn/
+  658  nohup scrapy crawl apn &
+  659  cd ..
+  660  cd apn
+  661  nohup scrapy crawl apn &
+  662  cd ..
+  663  cd ng
+  664  nohup scrapy crawl ng &
+  665  cd ..
+  666  cd people
+  667  nohup scrapy crawl people &
+  668  cd ../..
+  669  cd 11.03
+  670  cd arlan
+  671  nohup scrapy crawl arlan &
+  672  cd ..
+  673  cd fishki
+  674  nohup scrapy crawl fishki &
+  675  cd ..
+  676  cd moya-planeta
+  677  nohup scrapy crawl moya-planeta &
+  678  cd ..
+  679  cd planet-today
+  680  nohup scrapy crawl planet-today &
+  681  cd ..
+  682  cd politexpert
+  683  nohup scrapy crawl politexpert &
+  684  cd ..
+  685  cd rns
+  686  nohup scrapy crawl rns &
+  687  cd ..
+  688  cd spb
+  689  nohup scrapy crawl spb &
+  690  cd ..
+  691  cd sport-express
+  692  nohup scrapy crawl sport-express &
+  693  cd ..
+  694  cd vesti
+  695  nohup scrapy crawl vesti &
+  696  cd ..
+  697  cd vz
+  698  nohup scrapy crawl vz &
+  699  ps -ef | grep scrpay |grep -v grep
+  700  ps -ef | grep scrapy |grep -v grep
+  701  kill -9 20648
+  702  cd ../../..
+  703  ls
+  704  cd Russian/
+  705  ls
+  706  cd 11.02
+  707  ls
+  708  cd apn/
+  709  nohup scrapy crawl apn &
+  710  kill -9 20757
+  711  nohup scrapy crawl apn &
+  712  kill -9 20765
+  713  ps -ef | grep scrapy |grep -v grep
+  714  cd /usr/local/apache-tomcat-8.0.38/bin/
+  715  sudo ./shutdown.sh 
+  716  ./startup.sh 
+  717  sudo ./shutdown.sh 
+  718  sudo ./startup.sh 
+  719  cd /usr/local/
+  720  docker pull ubuntu
+  721  docker ps 
+  722  docker images 
+  723  docker run -it ubuntu bash
+  724  docker run -it --name=test  ubuntu bash 
+  725  docker start test
+  726  docker exec -it  test
+  727  docker exec -it  test bash
+  728  docker cp /etc/apt/sources.list test:/etc/apt/sources.list
+  729  docker ps
+  730  docker pull tomcat:8.0
+  731  cd /usr/local/
+  732  ls -l
+  733  ps -ef |grep java
+  734  cd ../local/
+  735  cd apache-tomcat-8.0.38/logs/
+  736  tail -f catalina.out 
+  737  cd ../webapps/
+  738  ls -l
+  739  cd ../bin/
+  740  sudo ./shutdown.sh 
+  741  sudo ./startup.sh 
+  742  cd ../logs/
+  743  tail -f catalina.out 
+  744  ps -ef |grep java
+  745  tail - f catalina.out 
+  746  tail -f catalina.out 
+  747  ps -ef |grep java
+  748  docker ps
+  749  tail -f catalina.out 
+  750  cd /etc/letsencrypt/live/test.newtranx.com/
+  751  cd /usr/local/
+  752  ls -l
+  753  cd certbot-master/
+  754  ls -l
+  755  sudo ./letsencrypt-auto --help
+  756  letsencrypt-auto --help
+  757  sudo ./letsencrypt-auto certonly --standalone
+  758  cd /etc/letsencrypt/live/test.newtranx.com/
+  759  ls -l
+  760  openssl pkcs12 -export -in cert.pem -inkey privkey.pem -out cert_and_key.p12 -name tomcat -CAfile chain.pem -caname root
+  761  ls -l
+  762  keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeystore MyDSKeyStore.jks -srckeystore cert_and_key.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias tomcat
+  763  ls -l
+  764  keytool -import -trustcacerts -alias root -file chain.pem -keystore MyDSKeyStore.jks
+  765  ls -l
+  766  cd /usr/local/apache-tomcat-8.0.38/logs/
+  767  tail -f catalina.out 
+  768  ll keys/
+  769  cd live/
+  770  ll
+  771  cd test.newtranx.com/
+  772  ll
+  773  cd ..
+  774  rm -rf letsencrypt/
+  775  ll
+  776  netstat -apn|grep 443
+  777  ps -ef|grep java
+  778  cd /home/
+  779  cd newtranx-test/
+  780  ll
+  781  cd data/
+  782  ll
+  783  cd zookeeper/
+  784  ll
+  785  pwd
+  786  ll
+  787  cd data/
+  788  ;;
+  789  ll
+  790  cd ..
+  791  rm -rf *
+  792  ll
+  793  netstat -apn|grep 9092
+  794  cd 
+  795  docker cp /usr/local/apache-tomcat-8.0.38/webapps/* cas_test:/usr/local/tomcat/webapps/
+  796  docker cp -rf  /usr/local/apache-tomcat-8.0.38/webapps/* cas_test:/usr/local/tomcat/webapps/
+  797  docker cp -f  /usr/local/apache-tomcat-8.0.38/webapps/* cas_test:/usr/local/tomcat/webapps/
+  798  docker cp   /usr/local/apache-tomcat-8.0.38/webapps/* cas_test:/usr/local/tomcat/webapps/ bash
+  799  docker cp   /usr/local/apache-tomcat-8.0.38/webapps/cas.war cas_test:/usr/local/tomcat/webapps/ bash
+  800  docker cp /usr/local/apache-tomcat-8.0.38/webapps/cas.war cas_test:/usr/local/tomcat/webapps/ bash
+  801  docker cp /usr/local/apache-tomcat-8.0.38/webapps/cas.war cas_test:/usr/local/tomcat/webapps/ 
+  802  docker cp /usr/local/apache-tomcat-8.0.38/webapps/ucenter.war cas_test:/usr/local/tomcat/webapps/ 
+  803  docker cp /etc/apt/sources.list cas_test:/etc/apt/sources.list
+  804  exit
+  805  ls -l
+  806  cd /usr/local/
+  807  ls
+  808  cd ../..
+  809  ls
+  810  ls -l
+  811  docker pull docker.newtranx.com:5000/libreoffice-aurora
+  812  cd /usr/local/apache-tomcat-8.0.38/webapps/
+  813  ls -l
+  814  cd /usr/local/
+  815  ls -l
+  816  cd office/
+  817  ls -l
+  818  docker cp ms-office-converter-1.0.0-SNAPSHOT.jar test:/usr/local
+  819  docker exec -it test bash
+  820  ls -l
+  821  cd /usr/local/apache-tomcat-8.0.38/webapps/
+  822  ls -l
+  823  sudo mv cas.war cas1.war
+  824  sudo mv ucenter.war ucenter1.war 
+  825  ls -l
+  826  sudo rm -rf ucenter
+  827  ls -l
+  828  cd ../bin/
+  829  sudo ./shutdown.sh 
+  830  cd ..w/e
+  831  ls -l
+  832  sudo rm perfStats*
+  833  ls -l
+  834  sudo rm cas-2016-11-*
+  835  ls -l
+  836  sudo ./shutdown.sh 
+  837  sudo ./startup.sh 
+  838  cd /usr/local/apache-tomcat-8.0.38/logs/
+  839  tail -f catalina.out 
+  840  cd ../webapps/
+  841  ls -l
+  842  cd /home/
+  843  ls
+  844  cd newtranx-test/
+  845  ls
+  846  cd /opt/lampp/htdocs/
+  847  ls
+  848  zip
+  849  sudo apt-get install zip
+  850  zip -r newtranx.zip newtranx
+  851  ls -l
+  852  pwd
+  853  ifconfig 
+  854  pwd
+  855  cd /root
+  856  ls -l
+  857  cd /opt/lampp/htdocs/
+  858  ls -l
+  859  cd newtranx/
+  860  pwd
+  861  ls -l
+  862  docker search tomcat
+  863  docker images 
+  864  sudo docker pull tomcat:8.0
+  865  ls -l
+  866  docker images 
+  867  docker run -it -p 8080:8081 -p 8443:8443 --name=test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home
+  868  docker run -it -p 8080:8081 -p 8443:8443 --name=test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home tomcat:80
+  869  docker run -it -p 8080:8081 -p 8443:8443 --name=test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home tomcat
+  870  docker run -it -p 8080:8081 -p 8443:8443 --name=test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  871  docker run -it -p 8080:8081 -p 8443:8443 --name=cas-test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  872  docker run -it  --name=test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  873  docker run -it -p 8080:8080 -p 8443:8443 --name=cas-test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home 
+  874  docker run -it -p 8080:8080 -p 8443:8443 --name=cas-test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home tomcat:80
+  875  docker run -it -p 8080:8080 -p 8443:8443 --name=cas-test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  876  docker ps
+  877  docker start cat-test
+  878  docker run -it -p 8080:8080 -p 8443:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  879  docker run -it -p 8080:8080 -p 8443:8443 --name=cas_test    bash
+  880  docker images 
+  881  docker rmi tomcat:latest 
+  882  docker rm tomcat:latest 
+  883  docker rm cas-test 
+  884  docker rm cas_test
+  885  docker rm tomcat:latest 
+  886  docker images 
+  887  docker run -it -p 8080:8080 -p 8443:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home tomcat:80
+  888  docker run -it -p 8080:8080 -p 8443:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home tomcat
+  889  docker run -it -p 8080:8080 -p 8443:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  890  docker run -it -p 8081:8080 -p 8443:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  891  docker rm cas_test 
+  892  docker run -it -p 8081:8080 -p 8444:8443 --name=cas_test -v /usr/local/apache-tomcat-8.0.38/webapps/:/home ebb17717bed4
+  893  cd /usr/local/
+  894  ls -l
+  895  docker start cas_test 
+  896  docker exec -it cas_test bash
+  897  docker ps 
+  898  docker stop cas_test 
+  899  docker ps 
+  900  docker start cas_test 
+  901  docker logs -f --tail=500 cas_test 
+  902  docker exec -it cas_test 
+  903  docker exec -it cas_test  bash
+  904  history 
+  905  cd /
+  906  history >test.txt
+  907  ls -l
+  908  sudo vim test.txt 
+  909  sudo sz
+  910  sudo ls
+  911  ls -l
+  912  sz
+  913  docker -it run test
+  914  docker ps
+  915  docker exec -it test
+  916  docker exec -it test bash
+  917  docker ps
+  918  docker exec test 
+  919  docker exec -it  test 
+  920  docker exec -it  test bash
+  921  ls -l
+  922  docker images 
+  923  docker pull ubuntu:14.04
+  924  docker images 
+  925  docker run -it -p 8001:8001 -v /usr/local/office/:/usr/local ubuntu:14.04
+  926  docker ps 
+  927  docker run -it -p 8001:8001 --name=office  -v /usr/local/office/:/usr/local ubuntu:14.04 
+  928  docker ps
+  929  docker start   office
+  930  docker ps
+  931  docker exec  -it office 
+  932  docker exec  -it office /bin/bash
+  933  docker ps
+  934  docker cp /etc/apt/sources.list office:/etc/apt/sources.list
+  935  docker exec -it office 
+  936  docker exec -it office bash
+  937  docker logs -f --tail=500 office 
+  938  docker exec -it office bash
+  939  docker images 
+  940  docker ps
+  941  docker stop test 
+  942  docker ps
+  943  docker rm test 
+  944  docker images 
+  945  docker rmi  ubuntu:latest 
+  946  docker rm f753707788c5
+  947  docker rmi -d  ubuntu:latest 
+  948  docker rm -d  ubuntu:latest 
+  949  history >chenxinyou.txt
+  
+  
+  
+  
+  
+  
+  keytool -genkey -alias tomcat -keyalg RSA -keystore ~/my.keystore -dname "CN=demo1.yeeedu.com, OU=demo1.yeeedu.com, O=demo1.yeeedu.com, L=SH, ST=SH, C=CN" -keypass changeit -storepass changeit  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

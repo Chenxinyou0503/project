@@ -1,0 +1,60 @@
+﻿
+jdk9的发布，部分ppa无法直接安装jdk8
+	新的安装方法
+	echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list
+	echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+	//////////////apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+	apt-get update
+	apt-get install oracle-java8-installer
+
+
+安装ppa
+
+	依赖
+		sudo apt-get install python-software-properties
+		sudo apt-get install software-properties-common﻿
+
+	sudo add-apt-repository ppa:openjdk-r/ppa
+
+更新源
+
+	sudo apt-get update
+ 
+安装jdk
+	
+	sudo apt-get install openjdk-8-jdk
+
+
+配置默认java版本
+	
+	sudo update-alternatives --config java
+
+配置javac命令
+
+	sudo update-alternatives --config javac
+	
+	
+
+	
+
+稳定版 Oracle Java8
+	
+	要略过代理设置，使用sudo命令并加上参数E
+	sudo add-apt-repository -y ppa:webupd8team/java
+	sudo add-apt-repository ppa:webupd8team/java
+	
+更新apt包数据库
+
+	sudo apt-get update
+	
+安装
+
+	sudo apt-get -y install oracle-java8-installer
+	
+配置默认java命令
+	
+	sudo update-alternatives --config java
+
+配置javac命令
+
+	sudo update-alternatives --config javac

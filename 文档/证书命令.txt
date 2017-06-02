@@ -1,0 +1,146 @@
+﻿安装git
+
+    apt-get update
+    apt-get -y install git
+
+
+Let's Encrypt的客户端源码
+
+    git clone https://github.com/letsencrypt/letsencrypt
+
+    netstat -na | grep ':80.*LISTEN'
+
+	命令来检测，当返回值为空时，就说明没有程序在监听80端口
+Let's Encrypt目录
+
+    cd letsencrypt
+
+运行Standalone插件
+
+   sudo  ./letsencrypt-auto certonly --standalone
+   letsencrypt-auto-source/letsencrypt-auto --os-packages-only
+成功提示
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/mt.newtranx.com/fullchain.pem. Your cert will
+   expire on 2016-11-17. To obtain a new or tweaked version of this
+   certificate in the future, simply run letsencrypt-auto again. To
+   non-interactively renew *all* of your certificates, run
+   "letsencrypt-auto renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+   cd /etc/letsencrypt/live/mt.newtranx.com/
+	fullchain.pem包含了网站证书和根证书链
+
+配置Nginx
+	修改我们的虚拟主机配置文件，在listen后面把80改成443，并加SSL，然后在下面加入我们的证书和密钥地址。
+
+            listen 443 ssl;
+            ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+            ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+            ssl_prefer_server_ciphers on;
+            ssl_ciphers AES256+EECDH:AES256+EDH:!aNULL;
+
+Create a keystore for Tomcat  PKCS12 keystore
+	openssl pkcs12 -export -in cert.pem -inkey privkey.pem -out cert_and_key.p12 -name tomcat -CAfile chain.pem -caname root
+use Java’s keytool to generate a JKS from our PKCS12 file
+	keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeystore MyDSKeyStore.jks -srckeystore cert_and_key.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias tomcat
+	keytool -import -trustcacerts -alias root -file chain.pem -keystore MyDSKeyStore.jks
+
+<Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"
+maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+clientAuth="false" sslProtocol="TLS"
+keystoreFile="/etc/letsencrypt/live/mt.newtranx.com/MyDSKeyStore.jks" keystorePass="changeit"
+keyAlias="tomcat" keyPass="changeit"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+wget https://letsencrypt.org/certs/isrgrootx1.der
+wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.der
+wget https://letsencrypt.org/certs/lets-encrypt-x4-cross-signed.der
+keytool -import -alias isrgrootx1 -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts -storepass changeit -noprompt -file isrgrootx1.der
+keytool -import -alias letsencryptx3 -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts -storepass changeit -noprompt -file lets-encrypt-x3-cross-signed.der
+keytool -import -alias letsencryptx4 -keystore /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts -storepass changeit -noprompt -file lets-encrypt-x4-cross-signed.der
+rm isrgrootx1.der lets-encrypt-x3-cross-signed.der lets-encrypt-x4-cross-signed.der
+
+
+https://community.letsencrypt.org/t/how-to-use-the-certificate-for-tomcat/3677/4
+
+
+sudo git clone https://github.com/letsencrypt/letsencrypt /usr/local/letsencrypt
+cd /usr/local/letsencrypt
+
+
+
+
+./letsencrypt-auto certonly --standalone --email mq_shi@qq.com -d mt.newtranx.com 
+cd /etc/letsencrypt/live/mt.newtranx.com
+
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out pkcs.p12 -name newtranx
+
+keytool -importkeystore -deststorepass newtranx -destkeypass newtranx -destkeystore keystore.jks -srckeystore pkcs.p12 -srcstoretype PKCS12 -srcstorepass newtranx -alias newtranx
+
+
+
+
+
+ sudo ./letsencrypt-auto certonly --email meiqiang_shi@newtranx.com -d user.newtranx.com --webroot -w /usr/local/apache-tomcat-8.0.33/sso --agree-tos
+
+
+ openssl pkcs12 -export -in cert.pem -inkey privkey.pem -out cert_and_key.p12 -name tomcat -CAfile chain.pem -caname root
+
+keytool -importkeystore -deststorepass changeit -destkeypass changeit -destkeystore MyDSKeyStore.jks -srckeystore cert_and_key.p12 -srcstoretype PKCS12 -srcstorepass changeit -alias tomcat
+keytool -import -trustcacerts -alias root -file chain.pem -keystore MyDSKeyStore.jks
+=------------------------------------------
+
+
+
+
+
+ - Congratulations! Your certificate and chain have been saved at
+   /etc/letsencrypt/live/mt.newtranx.com/fullchain.pem. Your cert will
+   expire on 2016-11-17. To obtain a new or tweaked version of this
+   certificate in the future, simply run letsencrypt-auto again. To
+   non-interactively renew *all* of your certificates, run
+   "letsencrypt-auto renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+
+
+
+
+
+
+
+WeChatProfile#o8SWOwFbm7OdPV4L8SHMISLzgl7U
+
+
+

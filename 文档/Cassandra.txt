@@ -1,0 +1,5 @@
+CassandraÊı¾İ¿â
+	echo "deb http://www.apache.org/dist/cassandra/debian 36x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+	sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-key 749D6EEC0353B12C
+	sudo apt-get update
+	sudo apt-get install cassandra

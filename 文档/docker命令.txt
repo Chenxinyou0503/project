@@ -1,0 +1,56 @@
+sudo docker pull ubuntu:14.04 //下载Ubuntu 14.04 版本的镜像
+
+sudo docker images // 查看本想所有镜像
+
+sudo docker ps // 查看运行中的所有容器
+
+sudo docker ps -a //查看所有容器（包括已停止）
+
+sudo docker exec -it test bash //以交互的模式进入容器
+
+sudo docker run -it -d -p 8001:8001 --name=office  -v /usr/local/office/:/usr/local ubuntu:14.04  
+
+//运行一个名字叫office的容器，并且映射8001端口，8001:8001 冒号前面端口号为服务器端口，冒号后面为容器端口，映射文件夹地址 冒号前面为服务器地址，冒号后面为容器地址， -i 以交互模式运行容器，通常与 -t 同时使用；-t 为容器重新分配一个伪输入终端，通常与 -i 同时使用；
+
+sudo docker cp /etc/apt/sources.list office:/etc/apt/sources.list // 拷贝服务器文件到office docker容器中
+
+sudo  docker logs -f --tail=500 office  // 查看office容器日志  --tail =500 输出500行之后持续输出
+
+sudo docker stop office //关闭一个容器
+
+sudo docker start office_test // 启动一个容器
+
+docker commit fdf1b59279cf docker.newtranx.com:5000/libreoffice-swftools-aurora:20161129.1
+
+从一个正在运行的镜像中commit一个容器。fdf1b59279cf 为一个正在运行镜像的CONTAINER ID  
+
+docker rmi docker.newtranx.com:5000/libreoffice-swftools-aurora:20161129.2
+
+删除一个容器 docker.newtranx.com:5000/libreoffice-swftools-aurora:20161129.2为images
+
+docker rm (container) container 为依赖的镜像id 要删除容器，首先要删除依赖， 
+
+docker save docker.newtranx.com:5000/libreoffice-swftools-aurora:20161129.2 > save.tar
+保存一个镜像
+
+docker load < save.tar
+加载一个镜像
+
+scp zyyt@192.168.16.16:/var/www/html_internal/save2016127.tar ./
+从16测试机上拷贝到本测试机上（跨服务机复制文件）
+
+查看docker image的IP地址
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' test
+
+
+
+docker cp libfastcommon-master.zip aligner:/usr/local/temp/
+docker cp zookeeper-3.4.9.tar.gz aligner:/usr/local/temp/
+docker cp kafka_2.10-0.10.1.1.tgz aligner:/usr/local/temp/
+docker cp jdk-8u101-linux-x64.tar.gz aligner:/usr/local/temp/
+docker cp /etc/apt/sources.list aligner:/etc/apt/sources.list
+docker cp /home/newtranx_elk/ aligner:/home
+
+
+
+

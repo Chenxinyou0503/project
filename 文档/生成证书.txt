@@ -1,0 +1,51 @@
+1.   验证是否已创建过同名的证书 
+
+
+Window ： keytool -list -v -alias tomcat -keystore "%JAVA_HOME%/jre/lib/security/cacerts" -storepass changeit 
+
+Linux ： keytool -list -v -alias tomcat -keystore "$JAVA_HOME/jre/lib/security/cacerts" -storepass changeit  
+2.   删除已创建的证书 
+
+Window ： keytool -delete -alias tomcat -keystore "%JAVA_HOME%/jre/lib/security/cacerts" -storepass changeit  
+
+Linux ： keytool -delete -alias tomcat -keystore "$JAVA_HOME/jre/lib/security/cacerts" -storepass changeit  
+3.   服务器中生成证书： 
+
+
+(注：生成证书时，CN要和服务器的域名相同，如果在本地测试，则使用localhost)  
+
+Window ： keytool -genkey -alias tomcat -keyalg RSA -keystore d:/my.keystore -dname "CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN" -keypass changeit -storepass changeit  
+
+Linux ： keytool -genkey -alias tomcat -keyalg RSA -keystore ~/my.keystore -dname "CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN" -keypass changeit -storepass changeit  
+
+4.   导出证书，由客户端安装： 
+
+
+window ： keytool -export -alias tomcat -keystore d:/my.keystore -file d:/mycerts.cer -storepass changeit  
+
+Linux ： keytool -export -alias tomcat -keystore ~/my.keystore -file ~/mycerts.cer -storepass changeit  
+
+5.   客户端配置：为客户端的JVM导入密钥(将服务器下发的证书导入到JVM中) 
+
+
+window ： keytool -import -trustcacerts -alias tomcat -keystore "%JAVA_HOME%/jre/lib/security/cacerts" -file d:/mycerts.cer -storepass changeit  
+
+Linux ： keytool -import -trustcacerts -alias tomcat -keystore "$JAVA_HOME/jre/lib/security/cacerts" -file ~/mycerts.cer -storepass changeit  
+
+
+
+
+
+
+1、通过keytool 生成密钥库[注意 CN 为服务端访问域名地址或者IP地址或者主机名]
+keytool -genkey -alias casserver -keystore casserver.jks -keypass changeit -storepass changeit -keyalg RSA   -validity 7300 -v -dname "CN =demo1.yeeedu.com,O = demo1.yeeedu.com,DC = demo1.yeeedu.com,DC = demo1.yeeedu.com,OU = demo1.yeeedu.com"
+2、通过keytool将密钥库导出为P12
+keytool -importkeystore -srckeystore casserver.jks -destkeystore config.p12 -srcstoretype JKS -deststoretype PKCS12  -srcstorepass changeit -deststorepass changeit -srcalias casserver -destalias casserver -srckeypass changeit -destkeypass changeit –noprompt
+3、根据pkcs12 （config.p12） 生成证书请求 config.pem
+openssl pkcs12 -in config.p12 -out config.pem -passin pass:changeit -passout pass:changeit
+4、根据p12 密钥库分别导出 服务端私钥，与服务端证书以及客服端证书（双向认证时使用）
+openssl pkcs12 -in config.p12  -nodes -nocerts -out casserver.key
+openssl pkcs12 -in config.p12  -nodes -nokeys -clcerts -out casserver.crt
+openssl pkcs12 -in config.p12  -nodes -nokeys -cacerts -out casclient.crt
+5、浏览器访问跳过安全检查
+keytool -import -file  casserver.crt -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -alias casservice -trustcacerts

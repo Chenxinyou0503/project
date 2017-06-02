@@ -1,0 +1,52 @@
+1.安装Jpegsrc
+tar xzvf  jpegsrc.v9.tar.gz
+cd jpegsrc
+./configure
+make
+make install
+
+2.安装freeType
+./configure
+make
+make install
+
+3.安装libjpg
+执行 sudo apt search libjpg
+发现下面两个包
+libjpgalleg4-dev
+libjpgalleg4.4
+
+执行sudo apt-get install  libjpgalleg4-dev libjpgalleg4.4 进行安装
+
+4.安装swftools
+./configure
+make
+make install
+
+（
+	zlib，libjpeg，libgif，libfreetype
+
+	sudo apt-get install zlib1g
+	sudo apt-get install zlib1g.dev
+	sudo apt-get install jpeglib62
+	sudo apt-get install jpeglib62-dev
+	sudo apt-get install libfreetype6
+	sudo apt-get install libfreetype6-dev
+	sudo apt-get install libgif4-dev
+）
+
+如果执行pdf2swf文件出现 libjpeg.so.9 cannot open shared object file 错误，需要执行以下操作
+
+1.查看/etc/ld.so.conf 文件，是否添加/usr/local/bin和/usr/local/lib路径
+2.添加内容为：
+include /usr/local/bin/*.conf
+include /usr/local/lib/*.conf
+3.执行ldconfig命令，刷新/etc/ld.so.cache中的内容
+
+安装字体管理工具xfonts-tools和fontconfig
+apt-get install xfonts-tools
+apt-get install fontconfig
+mkfontscale
+mkfontdir      
+fc-cache
+fc-cache -f –v

@@ -1,0 +1,25 @@
+netstat -apn
+	查看端口
+netstat -a
+	查看已经连接的服务端口
+netstat -ap
+	查看所有的服务端口
+netstat -ap | grep 8080
+	查看8080端口
+ps -ef |grep tomcat
+	查看tomcat 运行的进程
+
+
+
+
+locale 查看系统编码
+
+安装字体管理工具xfonts-tools和fontconfig
+apt-get install xfonts-tools
+apt-get install fontconfig
+mkfontscale
+mkfontdir      
+fc-cache
+fc-cache -f –v
+fc-list :lang=zh 查看中文语言 
+fc-cache -v 更新字体缓存

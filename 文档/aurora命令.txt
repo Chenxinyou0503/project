@@ -1,0 +1,18 @@
+杀死一个aurora
+ aurora job killall test/www-data/prod/ourcat-target-text-stat-streams
+aurora job killall test/www-data/prod/ms-office-converter
+
+创建一个aurora
+aurora job create test/www-data/prod/ourcat-target-text-stat-streams ourcat-target-text-stat-streams.aurora 
+
+aurora job create test/www-data/prod/ms-office-converter ms-office-converter.aurora
+
+
+重启一个aurora 
+ aurora job restart test/www-data/prod/ourcat-target-text-stat-streams
+
+
+
+
+
+

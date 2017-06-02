@@ -1,0 +1,87 @@
+Ubuntu下部署FastDFS 5.05
+
+1. 下载安装libfastcommon
+
+	git clone https://github.com/happyfish100/libfastcommon.git
+	cd libfastcommon/
+	./make.sh
+	./make.sh install
+ 
+
+	确认make没有错误后，执行安装，64位系统默认会复制到/usr/lib64下。这时候需要设置环境变量或者创建软链接
+
+	export LD_LIBRARY_PATH=/usr/lib64/
+	ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so
+
+2. 下载安装fastdfs
+
+	tar xzf FastDFS.tar.gz
+	cd FastDFS/
+	./make.sh
+	./make.sh install
+ 
+
+确认make没有错误后，执行安装，默认会安装到/usr/bin中，并在/etc/fdfs中添加三个配置文件。
+
+3. 修改配置文件  
+	文件要自己创建
+	首先将三个文件的名字去掉sample，暂时只修改以下几点，先让fastdfs跑起来，其余参数调优的时候再考虑。
+	
+	tracker.conf 中修改
+		base_path=/usr/fastdfs #用于存放日志。
+
+	storage.conf 中修改
+
+		base_path=/usr/fastdfs-storaged #用于存放日志。
+		store_path0=/usr/fastdfs0 #存放数据，若不设置默认为前面那个。
+		tracker_server=192.168.128.128:22122 #指定tracker服务器地址。
+
+	client.conf 中修改
+
+		base_path=/usr/fastdfs #用于存放日志。
+		tracker_server=192.168.128.128:22122 #指定tracker服务器地址。
+
+4. 启动tracker和storage 
+
+	/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf
+	/usr/bin/fdfs_storaged /etc/fdfs/storage.conf
+
+5. 检查进程
+
+	root@ubuntu:~# ps -ef |grep fdfs
+	root       7819      1  0 15:24 ?        00:00:00 /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf
+	root       8046      1  0 15:36 ?        00:00:01 fdfs_storaged /etc/fdfs/storage.conf start
+	表示启动ok了，若有错误，可以在/usr/fastdfs目录下检查日志。
+
+6. 上传/删除测试
+
+	使用自带的fdfs_test来测试，使用格式如下：
+	root@ubuntu:~# fdfs_test /etc/fdfs/client.conf upload /home/steven/01.jpg 
+	group_name=group1, ip_addr=192.168.29.132, port=23000
+	storage_upload_by_filename
+	group_name=group1, remote_filename=M00/00/00/wKgdhFTV0ZmAP3AZAPk-Io7D4w8580.jpg
+
+	example file url: http://192.168.29.132/group1/M00/00/00/wKgdhFTV0ZmAP3AZAPk-Io7D4w8580.jpg
+	storage_upload_slave_by_filename
+	group_name=group1, remote_filename=M00/00/00/wKgdhFTV0ZmAP3AZAPk-Io7D4w8580_big.jpg
+	example file url: http://192.168.29.132/group1/M00/00/00/wKgdhFTV0ZmAP3AZAPk-Io7D4w8580_big.jpg
+
+7、使用fdfs_delete_file来删除文件，格式如下：
+
+	fdfs_delete_file /etc/fdfs/client.conf group1/M00/00/00/wKgdhFTV11uAXgKWAPk-Io7D4w8667.jpg
+	可以看到，上传ok了，这里会生成两个文件，这是fastdfs的主/从文件特性，以后再介绍。
+	example file url是不能在浏览器中直接打开的，除非配合nginx使用，这里我不需要了。
+	删除文件需要完整的group_name和remote_filename。
+
+8、建议的关闭防火墙命令
+
+	iptables -P INPUT ACCEPT 　　
+	iptables -P FORWARD ACCEPT 　　
+	iptables -P OUTPUT ACCEPT 　　
+	iptables -F 
+
+9、安装nginx
+	FastDFS的nginx插件fastdfs-nginx-module_v1.16.tar.gz
+	 tar zxvf fastdfs-nginx-module_v1.16.tar.gz 
+
+

@@ -1,0 +1,11 @@
+tar zxvf jdk-8u5-linux-i586.gz
+
+ ÐÞ¸Ä /etc/profile
+export JAVA_HOME=/usr/lib/jvm/java1.8.0_05
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH={JAVA_HOME}/bin:$PATH
+
+
+update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_101/bin/java 300
+update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_101/bin/javac 300

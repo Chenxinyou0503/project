@@ -1,0 +1,20 @@
+wget http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/5.1.6/deb/x86_64/LibreOffice_5.1.6_Linux_x86-64_deb.tar.gz
+tar -xzvf LibreOffice_5.0.2_Linux_x86-64_deb.tar.gz
+cd LibreOffice_5.0.2_Linux_x86-64_deb/DEBS
+sudo dpkg -i *.deb
+cd ../../
+wget http://mirrors.ustc.edu.cn/tdf/libreoffice/stable/5.1.6/deb/x86_64/LibreOffice_5.1.6_Linux_x86-64_deb_langpack_zh-CN.tar.gz
+tar -xzvf LibreOffice_5.0.2_Linux_x86-64_deb_langpack_zh-CN.tar.gz
+cd LibreOffice_5.0.2_Linux_x86-64_deb_langpack_zh-CN/DEBS
+sudo dpkg -i *.deb
+
+
+
+
+在docker中需要安装的包
+apt-get install libxinerama1
+apt-get install libgtk2.0-0
+apt-get install dbus        不知道安装是否影响下一步
+apt-get install libdbus-glib-1-dev
+apt-get install libgl1-mesa-glx-lts-utopic
+apt-get install libSM6

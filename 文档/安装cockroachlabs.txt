@@ -1,0 +1,12 @@
+tar xfz cockroach-latest.linux-amd64.tgz
+
+vim /etc/profile
+
+export COCKROACH_HOME=/usr/local/cockroach
+export PATH=${COCKROACH_HOME}/bin:$PATH
+
+
+cockroach version
+
+cockroach start
+
